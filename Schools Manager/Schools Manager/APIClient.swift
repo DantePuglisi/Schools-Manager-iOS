@@ -19,7 +19,7 @@ class APIClient {
     }
   }
   
-  static func login(withUsername username: String, password: String) {
+  static func login(withUsername username: String, password: String, completion: @escaping () -> Void) {
     print("Sending request")
     let parameters: Parameters = ["username": username, "password": password]
     Alamofire.request("http://127.0.0.1:5000/auth", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
@@ -30,6 +30,7 @@ class APIClient {
           UserDefaults.standard.set(access_token, forKey: "access_token")
         }
       }
+      completion()
     }
   }
 }

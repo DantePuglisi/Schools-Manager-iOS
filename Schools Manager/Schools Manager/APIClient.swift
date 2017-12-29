@@ -33,4 +33,32 @@ class APIClient {
       completion()
     }
   }
+  
+  /*static func getSchools(completion: @escaping (_ schools: [(id: Int, name: String)]) -> Void) {
+    Alamofire.request("http://127.0.0.1:5000/schools", method: .get).responseJSON { response in
+      if let json = response.result.value as? [String: AnyObject] {
+        var schoolsToReturn = [(id: Int, name: String)]()
+        if let schools = json["schools"] as? [[String: AnyObject]] {
+          for (index, school) in schools.enumerated() {
+            schoolsToReturn.append((id: index + 1, name: school["name"] as! String))
+          }
+        }
+        completion(schoolsToReturn)
+      }
+    }
+  }*/
+  
+  static func getStudents(completion: @escaping (_ students: [(name: String, schoolName: String)]) -> Void) {
+    Alamofire.request("http://127.0.0.1:5000/students", method: .get).responseJSON { response in
+      if let json = response.result.value as? [String: AnyObject] {
+        var studentsToReturn = [(name: String, schoolName: String)]()
+        if let students = json["students"] as? [[String: AnyObject]] {
+          for student in students {
+            studentsToReturn.append((name: student["name"] as! String, schoolName: student["school"] as! String))
+          }
+        }
+        completion(studentsToReturn)
+      }
+    }
+  }
 }

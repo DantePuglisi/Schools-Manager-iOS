@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     }
     APIClient.login(withUsername: usernameTextField.text!, password: passwordTextField.text!, completion: {
       if UserDefaults.standard.string(forKey: "access_token") != nil {
-        let storyboard = UIStoryboard(name: "SchoolsListViewController", bundle: nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "SchoolsListViewController") as! SchoolsListViewController
         self.present(controller, animated: true, completion: nil)
       }

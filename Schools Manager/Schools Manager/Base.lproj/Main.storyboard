@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Schools_Manager" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qlt-NU-SGI">
+                                <rect key="frame" x="16" y="189" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schools Manager" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82u-vc-o5X">
+                                <rect key="frame" x="92" y="70" width="191.5" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tta-JS-SgE">
+                                <rect key="frame" x="16" y="282" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9y-gf-i6L">
+                                <rect key="frame" x="16" y="160" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPD-Tk-UNC">
+                                <rect key="frame" x="16" y="253" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRb-u8-THC">
+                                <rect key="frame" x="65.5" y="360" width="57" height="30"/>
+                                <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="registerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y4u-Uu-jBK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DK0-Q7-54o">
+                                <rect key="frame" x="262.5" y="360" width="38" height="30"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cYu-Nt-fWg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qlt-NU-SGI" firstAttribute="top" secondItem="82u-vc-o5X" secondAttribute="bottom" constant="87.5" id="02e-Kf-GBH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NPD-Tk-UNC" secondAttribute="trailing" constant="16" id="9CQ-fJ-uCc"/>
+                            <constraint firstItem="qlt-NU-SGI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ANd-Tv-Tap"/>
+                            <constraint firstItem="JRb-u8-THC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.5" id="CIj-G1-XtD"/>
+                            <constraint firstItem="82u-vc-o5X" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ccy-sT-jj3"/>
+                            <constraint firstItem="Tta-JS-SgE" firstAttribute="top" secondItem="qlt-NU-SGI" secondAttribute="bottom" constant="63" id="DhF-wF-zLF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tta-JS-SgE" secondAttribute="trailing" constant="16" id="GA3-5f-Rg2"/>
+                            <constraint firstItem="Tta-JS-SgE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Kga-w8-wjh"/>
+                            <constraint firstItem="Tta-JS-SgE" firstAttribute="top" secondItem="NPD-Tk-UNC" secondAttribute="bottom" constant="8" id="QQc-wE-tOC"/>
+                            <constraint firstItem="qlt-NU-SGI" firstAttribute="top" secondItem="a9y-gf-i6L" secondAttribute="bottom" constant="8" id="T13-a4-2ru"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a9y-gf-i6L" secondAttribute="trailing" constant="16" id="WaV-ep-rwA"/>
+                            <constraint firstItem="DK0-Q7-54o" firstAttribute="top" secondItem="Tta-JS-SgE" secondAttribute="bottom" constant="48" id="XRQ-yQ-X6R"/>
+                            <constraint firstItem="a9y-gf-i6L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="YI9-bp-dkX"/>
+                            <constraint firstItem="JRb-u8-THC" firstAttribute="top" secondItem="Tta-JS-SgE" secondAttribute="bottom" constant="48" id="cZd-r2-gMY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qlt-NU-SGI" secondAttribute="trailing" constant="16" id="jhR-ue-eIJ"/>
+                            <constraint firstItem="DK0-Q7-54o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.5" id="nD9-4C-PgF"/>
+                            <constraint firstItem="NPD-Tk-UNC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="yOP-SW-ixa"/>
+                            <constraint firstItem="82u-vc-o5X" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="yyZ-Gt-MZ3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="Tta-JS-SgE" id="CwI-5d-Gw9"/>
+                        <outlet property="usernameTextField" destination="qlt-NU-SGI" id="bNk-hN-oFL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+</document>

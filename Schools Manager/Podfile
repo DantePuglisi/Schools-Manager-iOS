@@ -1,0 +1,4 @@
+target 'Schools Manager' do
+  use_frameworks!
+  pod 'Alamofire'
+end
